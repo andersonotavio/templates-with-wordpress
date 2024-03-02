@@ -10,9 +10,21 @@ function otaviow_load_scripts(){
 
 add_action('wp_enqueue_scripts', 'otaviow_load_scripts');
 
-register_nav_menus(
-  array(
-    'otaviow_main_menu' => 'Main Menu',
-    'otavios_footer_menu' => 'Footer Menu'
-  )
-);
+function otaviow_config(){
+  register_nav_menus(
+    array(
+      'otaviow_main_menu' => 'Main Menu',
+      'otavios_footer_menu' => 'Footer Menu'
+    )
+  );
+
+  $args = array( 
+    'height' => 225,
+    'width' => 1920
+  );
+  add_theme_support('custom-header', $args);
+  add_theme_support('post-thumbnails');
+  
+}
+
+add_action('after_setup_theme', 'otaviow_config', 0);

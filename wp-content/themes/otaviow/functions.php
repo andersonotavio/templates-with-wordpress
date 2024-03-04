@@ -36,3 +36,59 @@ function otaviow_config(){
 }
 
 add_action('after_setup_theme', 'otaviow_config', 0);
+
+add_action('widgets_init', 'otaviow_sidebars');
+
+function otaviow_sidebars(){
+  register_sidebar(
+    array(
+      'name' => 'Blog Sidebar',
+      'id'   => 'sidebar-blog',
+      'description' => 'This is the Blog Sidebar. You can add your widgets here.',
+      'before_widget' => '<div class="widget-wrapper">', 
+      'after_widget' => '</div>',
+      'before_title' => '<h4 class="widget-title">', 
+      'after_title' => '</h4>',
+
+    )
+  );
+
+  register_sidebar(
+    array(
+      'name' => 'Service 1',
+      'id'   => 'service-1',
+      'description' => 'Fist service Area',
+      'before_widget' => '<div class="widget-wrapper">', 
+      'after_widget' => '</div>',
+      'before_title' => '<h4 class="widget-title">', 
+      'after_title' => '</h4>',
+
+    )
+  );
+
+  register_sidebar(
+    array(
+      'name' => 'Service 2',
+      'id'   => 'service-2',
+      'description' => 'Second service Area',
+      'before_widget' => '<div class="widget-wrapper">', 
+      'after_widget' => '</div>',
+      'before_title' => '<h4 class="widget-title">', 
+      'after_title' => '</h4>',
+
+    )
+  );
+
+  register_sidebar(
+    array(
+      'name' => 'Service 3',
+      'id'   => 'service-3',
+      'description' => 'Third service Area',
+      'before_widget' => '<div class="widget-wrapper">', 
+      'after_widget' => '</div>',
+      'before_title' => '<h4 class="widget-title">', 
+      'after_title' => '</h4>',
+
+    )
+  );
+}

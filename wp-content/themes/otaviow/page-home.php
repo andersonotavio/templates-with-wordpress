@@ -6,7 +6,24 @@
             hero
           </section>
           <section class="services">
-            services
+            <h2>Services</h2>
+            <div class="container">
+              <div class="services-item">
+                <?php if( is_active_sidebar('service-1')){
+                      dynamic_sidebar('service-1');
+                }?>
+              </div>
+              <div class="services-item">
+              <?php if( is_active_sidebar('service-1')){
+                      dynamic_sidebar('service-2');
+                }?>
+              </div>
+              <div class="services-item">
+              <?php if( is_active_sidebar('service-1')){
+                      dynamic_sidebar('service-3');
+                }?>
+              </div>
+            </div>
           </section>
           <section class="home-blog">
             <div class="container">

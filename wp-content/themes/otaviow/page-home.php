@@ -32,7 +32,7 @@
                 $args = array(
                     'post_type' => 'post',
                     'posts_per_page' => 5,
-                    'category__in'  => array( 9, 10, 15 ),
+                    'category__in'  => array( 11, 12, 13 ),
                     'category__not_in' => array( 1 )
                 );
 

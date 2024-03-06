@@ -32,6 +32,8 @@ function otaviow_config(){
       'flex-width' => true
     )
     );
+  add_theme_support( 'automatic-feed-links' );
+  add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption', 'style', 'script' ));
   add_theme_support('title-tag');
 }
 
@@ -91,4 +93,11 @@ function otaviow_sidebars(){
 
     )
   );
+
 }
+
+if ( ! function_exists( 'wp_body_open' ) ){
+	function wp_body_open() {
+		do_action( 'wp_body_open' );
+	}
+};
